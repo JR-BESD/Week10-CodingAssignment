@@ -3,14 +3,15 @@ package entity;
 public class Camera {
 
 	private int camId;
+	private int mfrId;
 	private String camName;
 	private String camType;
 	private String imgType;
 	private int year;
-	
 
-	public Camera(int id, String name, String type, String img, int year) {
+	public Camera(int id, int mfrId, String name, String type, String img, int year) {
 		this.setCamId(id);
+		this.setMfrId(mfrId);
 		this.setCamName(name);
 		this.setCamType(type);
 		this.setImgType(img);
@@ -55,6 +56,14 @@ public class Camera {
 
 	public void setYear(int year) {
 		this.year = year;
+	}
+
+	public int getMfrId() {
+		return mfrId;
+	}
+
+	public void setMfrId(int mfrId) {
+		this.mfrId = mfrId;
 	}
 
 }
