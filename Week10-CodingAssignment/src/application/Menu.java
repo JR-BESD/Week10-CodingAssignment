@@ -330,7 +330,13 @@ public class Menu {
 		int camId = id;
 		System.out.print("Enter new Type: ");
 		String type = scanner.nextLine();
-		camDao.modImageTypeById(camId, type);
+		if (!type.equals("film") && !type.equals("digital")) {
+			System.out.println("Please Enter 'film' or 'digital'!");
+			changeImgType(camId);
+		} else {
+			camDao.modImageTypeById(camId, type);
+		}
+		
 	}
 
 	/*
